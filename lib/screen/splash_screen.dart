@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:yayasan/screen/dashboard_screen.dart';
 
+<<<<<<< HEAD
 import 'package:yayasan/screen/login_screen.dart';
 
+=======
+>>>>>>> 24032be2cba1f2da9a2d299bef0380e5170eb385
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
 
@@ -12,7 +15,11 @@ class SplashScreen extends StatelessWidget {
     Future.delayed(const Duration(seconds: 3)).then((value) {
       Navigator.of(context).pushAndRemoveUntil(
         MaterialPageRoute(
+<<<<<<< HEAD
           builder: (context) => const LoginScreen1(),
+=======
+          builder: (context) => const DashboardScreen(),
+>>>>>>> 24032be2cba1f2da9a2d299bef0380e5170eb385
         ),
         (route) => false,
       );

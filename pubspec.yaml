@@ -1,11 +1,18 @@
 name: yayasan
 description: "A new Flutter project."
+<<<<<<< HEAD
 publish_to: "none"
+=======
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
+>>>>>>> 24032be2cba1f2da9a2d299bef0380e5170eb385
 
 version: 1.0.0+1
 
 environment:
   sdk: ">=3.3.0 <4.0.0"
+<<<<<<< HEAD
 
 dependencies:
   flutter:
@@ -15,13 +22,25 @@ dependencies:
   cupertino_icons: ^1.0.6
   http: ^1.1.0
   shared_preferences: ^2.2.3
+=======
+dependencies:
+  flutter:
+    sdk: flutter
+  google_fonts: ^4.0.1
+  font_awesome_flutter: ^10.1.0
+  cupertino_icons: ^1.0.6
+>>>>>>> 24032be2cba1f2da9a2d299bef0380e5170eb385
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+<<<<<<< HEAD
   flutter_lints: ^4.0.0
   image_picker: ^0.8.4+4
   # file_picker: ^5.0.1
+=======
+  flutter_lints: ^3.0.0
+>>>>>>> 24032be2cba1f2da9a2d299bef0380e5170eb385
 
 flutter:
   uses-material-design: true

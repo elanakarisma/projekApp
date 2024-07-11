@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+<<<<<<< HEAD
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -133,11 +134,29 @@ class _ModalScreenState extends State<ModalScreen> {
 
   @override
   Widget build(BuildContext context) {
+=======
+
+class ModalScreen extends StatelessWidget {
+  const ModalScreen({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    // Define the controllers
+    final TextEditingController passwordController = TextEditingController();
+
+    Future.delayed(const Duration(seconds: 3)).then((value) {});
+
+>>>>>>> 24032be2cba1f2da9a2d299bef0380e5170eb385
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 11, 37, 105),
       body: SafeArea(
         child: Padding(
+<<<<<<< HEAD
           padding: const EdgeInsets.all(30.0),
+=======
+          padding:
+              const EdgeInsets.only(top: 20, left: 30, right: 30, bottom: 30),
+>>>>>>> 24032be2cba1f2da9a2d299bef0380e5170eb385
           child: Center(
             child: SingleChildScrollView(
               child: Column(
@@ -157,6 +176,7 @@ class _ModalScreenState extends State<ModalScreen> {
                     ),
                   ),
                   const SizedBox(height: 30), // Added spacing between elements
+<<<<<<< HEAD
                   _buildInputSection('Nama Donatur', namaDonaturController, false),
                   const SizedBox(height: 16.0),
                   _buildInputSection('No Telepon', noTeleponController, false),
@@ -198,12 +218,63 @@ class _ModalScreenState extends State<ModalScreen> {
                             ),
                           ),
                         ),
+=======
+                  _buildInputSection('Nama Donatur', passwordController, true),
+                  const SizedBox(height: 16.0),
+                  _buildInputSection('No Telepon', passwordController, true),
+                  const SizedBox(height: 16.0),
+                  _buildInputSection('Rek Donasi', passwordController, true),
+                  const SizedBox(height: 16.0),
+                  _buildInputSection('Jumlah Donasi', passwordController, true),
+                  const SizedBox(height: 16.0),
+                  _buildInputSection('Nama Program', passwordController, true),
+                  const SizedBox(height: 16.0),
+                  _buildInputSection(
+                      'Bukti Transfer', passwordController, true),
+                  const SizedBox(height: 40), // Added spacing before button
+                  ElevatedButton(
+                    onPressed: () {
+                      // Handle button press
+                      print('Button pressed');
+                    },
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.resolveWith<Color>(
+                        (Set<MaterialState> states) {
+                          if (states.contains(MaterialState.pressed)) {
+                            return const Color.fromARGB(
+                                255, 11, 37, 105); // Pressed color
+                          }
+                          return Colors.white; // Default color
+                        },
+                      ),
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30.0),
+                        ),
+                      ),
+                      padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
+                        const EdgeInsets.symmetric(
+                            horizontal: 50, vertical: 15),
+                      ),
+                    ),
+                    child: Text(
+                      'Submit',
+                      style: TextStyle(
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold,
+                        color: const Color.fromARGB(
+                            255, 11, 37, 105), // Text color
+                      ),
+                    ),
+                  ),
+>>>>>>> 24032be2cba1f2da9a2d299bef0380e5170eb385
                 ],
               ),
             ),
           ),
         ),
       ),
+<<<<<<< HEAD
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
@@ -228,11 +299,17 @@ class _ModalScreenState extends State<ModalScreen> {
         unselectedItemColor: Colors.grey,
         onTap: _onItemTapped,
       ),
+=======
+>>>>>>> 24032be2cba1f2da9a2d299bef0380e5170eb385
     );
   }
 
   Widget _buildInputSection(
+<<<<<<< HEAD
       String label, TextEditingController controller, bool obscureText, {bool isNumeric = false}) {
+=======
+      String label, TextEditingController controller, bool obscureText) {
+>>>>>>> 24032be2cba1f2da9a2d299bef0380e5170eb385
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -251,7 +328,10 @@ class _ModalScreenState extends State<ModalScreen> {
           controller: controller,
           hintText: '',
           obscureText: obscureText,
+<<<<<<< HEAD
           isNumeric: isNumeric,
+=======
+>>>>>>> 24032be2cba1f2da9a2d299bef0380e5170eb385
         ),
       ],
     );
@@ -261,7 +341,10 @@ class _ModalScreenState extends State<ModalScreen> {
     required TextEditingController controller,
     required String hintText,
     bool obscureText = false,
+<<<<<<< HEAD
     bool isNumeric = false,
+=======
+>>>>>>> 24032be2cba1f2da9a2d299bef0380e5170eb385
   }) {
     return Container(
       decoration: BoxDecoration(
@@ -281,7 +364,10 @@ class _ModalScreenState extends State<ModalScreen> {
         child: TextField(
           controller: controller,
           obscureText: obscureText,
+<<<<<<< HEAD
           keyboardType: isNumeric ? TextInputType.number : TextInputType.text,
+=======
+>>>>>>> 24032be2cba1f2da9a2d299bef0380e5170eb385
           style: const TextStyle(fontSize: 14.0),
           decoration: InputDecoration(
             hintText: hintText,
